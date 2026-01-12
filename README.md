@@ -1,2 +1,0 @@
-# sam-dev
-Testing

@@ -1,0 +1,7 @@
+{
+  "name": "sam-dev",
+  "engineVersion": "v0.19.9",
+  "sdk": {
+    "source": "go"
+  }
+}
