@@ -8,6 +8,19 @@ from dagger import dag, function, object_type
 class SamDev:
     rootDir: Annotated[
         dagger.Directory,
+        dagger.Ignore(
+            [
+                ".env",
+                ".git",
+                "**/.venv",
+                "**__pycache__**",
+                ".dagger/sdk",
+                "**/.pytest_cache",
+                "**/.ruff_cache",
+                "**/node_modules",
+                "**/.evidence",
+            ]
+        ),
         dagger.DefaultPath("."),
     ]
 
