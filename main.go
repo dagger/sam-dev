@@ -23,7 +23,6 @@ import (
 type SamDev struct{}
 
 func (m *SamDev) Test(
-	// +defaultPath="."
 	dir *dagger.Directory,
 ) (string, error) {
 	return dag.Container().From("alpine").WithFile("/file", dir.File("dagger.json")).WithExec([]string{"cat", "/file"}).Stdout(context.Background())
