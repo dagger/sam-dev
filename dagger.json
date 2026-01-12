@@ -1,6 +1,6 @@
 {
   "name": "sam-dev",
-  "engineVersion": "v0.19.9",
+  "engineVersion": "v0.19.8",
   "sdk": {
     "source": "go"
   }
