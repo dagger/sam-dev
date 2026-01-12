@@ -16,19 +16,6 @@ class SamDev:
         self,
         directory: Annotated[
             dagger.Directory,
-            dagger.Ignore(
-                [
-                    ".env",
-                    ".git",
-                    "**/.venv",
-                    "**__pycache__**",
-                    ".dagger/sdk",
-                    "**/.pytest_cache",
-                    "**/.ruff_cache",
-                    "**/node_modules",
-                    "**/.evidence",
-                ]
-            ),
             dagger.DefaultPath("."),
         ],
     ) -> str:
