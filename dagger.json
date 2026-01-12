@@ -3,5 +3,12 @@
   "engineVersion": "v0.19.8",
   "sdk": {
     "source": "python"
-  }
+  },
+  "include": [
+    ".dagger",
+    "!*/**/.venv",
+    "!*/**/.pytest_cache",
+    "!*/**/.ruff_cache",
+    "!*/**/.envrc"
+  ]
 }
