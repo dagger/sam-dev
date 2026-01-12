@@ -20,7 +20,16 @@ import (
 	"dagger/sam-dev/internal/dagger"
 )
 
-type SamDev struct{}
+type SamDev struct {
+	dir *dagger.Directory
+}
+
+func New(
+	// +defaultPath="."
+	dir *dagger.Directory,
+) *SamDev {
+	return &SamDev{dir: dir}
+}
 
 func (m *SamDev) Test(
 	dir *dagger.Directory,
