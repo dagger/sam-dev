@@ -17,6 +17,7 @@ jobs:
           verb: call
           module: github.com/kpenfound/dagger-modules/golang@v0.2.0
           args: test --source=.
+          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
   build:
     name: build
     runs-on: ubuntu-latest
@@ -31,3 +32,4 @@ jobs:
           verb: call
           module: github.com/kpenfound/dagger-modules/golang@v0.2.0
           args: build-container --source=. --args=. publish --address=ttl.sh/my-app-$RANDOM:2h
+          cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
